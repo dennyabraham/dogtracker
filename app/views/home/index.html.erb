@@ -8,8 +8,8 @@
       paper.path("M " + x + " " + y + "l " + intensity * 10 + " -" + intensity * 10).attr({'stroke':'#f00', 'stroke-width':intensity});
       paper.path("M " + x + " " + y + "l -" + intensity * 10 + " -" + intensity * 10).attr({'stroke':'#f00', 'stroke-width':intensity});
     };
-    $.each(<%= raw(@positions.to_json) %>, function(idx, position) {
-      drawPosition(position.x, position.y, (6 - idx) * 0.34);
-    });
+    <% @positions.each_with_index do |position, idx| %>
+      drawPosition(<%= position.x %>, <%= position.y %>, (6 - <%= idx %>) * 0.34);
+    <% end %>
   })
 </script>
