@@ -294,6 +294,8 @@ a:hover {
   width: 520px;
 }
 .span10 {
+  background-image: url('/images/floorplan.png');
+  background-repeat: no-repeat;
   width: 580px;
 }
 .span11 {
