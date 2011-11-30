@@ -4,6 +4,7 @@ Dogtracker::Application.routes.draw do
     resources :dogs do
       resources :positions do
         get 'current' => 'positions#current', :on => :collection
+        get 'past' => 'positions#past', :on => :collection
       end
     end
   end
