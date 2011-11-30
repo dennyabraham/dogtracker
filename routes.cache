@@ -1,0 +1,17 @@
+Cannot find or read /Users/dennyabraham/Projects/talks/cltrb-lightning-talks-2011-11/no-performance-rails-apps/dogtracker/config/newrelic.yml
+                     root        /(.:format)                                    {:controller=>"home", :action=>"index"}
+current_api_dog_positions GET    /api/dogs/:dog_id/positions/current(.:format)  {:action=>"current", :controller=>"api/positions"}
+        api_dog_positions GET    /api/dogs/:dog_id/positions(.:format)          {:action=>"index", :controller=>"api/positions"}
+                          POST   /api/dogs/:dog_id/positions(.:format)          {:action=>"create", :controller=>"api/positions"}
+     new_api_dog_position GET    /api/dogs/:dog_id/positions/new(.:format)      {:action=>"new", :controller=>"api/positions"}
+    edit_api_dog_position GET    /api/dogs/:dog_id/positions/:id/edit(.:format) {:action=>"edit", :controller=>"api/positions"}
+         api_dog_position GET    /api/dogs/:dog_id/positions/:id(.:format)      {:action=>"show", :controller=>"api/positions"}
+                          PUT    /api/dogs/:dog_id/positions/:id(.:format)      {:action=>"update", :controller=>"api/positions"}
+                          DELETE /api/dogs/:dog_id/positions/:id(.:format)      {:action=>"destroy", :controller=>"api/positions"}
+                 api_dogs GET    /api/dogs(.:format)                            {:action=>"index", :controller=>"api/dogs"}
+                          POST   /api/dogs(.:format)                            {:action=>"create", :controller=>"api/dogs"}
+              new_api_dog GET    /api/dogs/new(.:format)                        {:action=>"new", :controller=>"api/dogs"}
+             edit_api_dog GET    /api/dogs/:id/edit(.:format)                   {:action=>"edit", :controller=>"api/dogs"}
+                  api_dog GET    /api/dogs/:id(.:format)                        {:action=>"show", :controller=>"api/dogs"}
+                          PUT    /api/dogs/:id(.:format)                        {:action=>"update", :controller=>"api/dogs"}
+                          DELETE /api/dogs/:id(.:format)                        {:action=>"destroy", :controller=>"api/dogs"}
