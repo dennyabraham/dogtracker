@@ -1,12 +1,5 @@
-class Api::PositionsController < InheritedResources::Base
-  belongs_to :dog
+class Api::PositionsController < ApplicationController
   respond_to :json
-  custom_actions :resource => :current, :collection => :past
-  def current
-    @dog = Dog.find(params[:dog_id])
-    @position = @dog.current_position
-    show!
-  end
 
   def past
     @dog = Dog.find(params[:dog_id])
@@ -16,6 +9,6 @@ class Api::PositionsController < InheritedResources::Base
         :y => position.y
       }
     end
-    index!
+    respond_with(@positions, :callback => params[:callback])
   end
 end
