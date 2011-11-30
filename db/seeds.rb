@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+dog = Dog.create!(:name => 'Ezio')
+for i in 1..500 do
+  x = Kernel.rand(400) + 50
+  y = Kernel.rand(300) + 100
+  dog.positions.create!(:x => x, :y => y, :time => 18.hours.ago + i * 5.minutes)
+end
