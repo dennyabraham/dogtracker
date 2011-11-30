@@ -12,7 +12,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag 'bootstrap' %>
-    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag :all %>
     <%= csrf_meta_tag %>
 
     <!-- Le styles -->
@@ -84,7 +84,7 @@
           <h1>Dog Tracker <small>because my dog lives in a police state</small></h1>
         </div>
         <div class="row">
-          <div class="span10">
+          <div class="span10" id="map">
             <% flash.each do |key, value| -%>
               <div class="flash <%= key %>"><%= value %></div>
             <% end -%>
